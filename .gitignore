@@ -1,0 +1,26 @@
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+
+# Ignore virtual environments
+venv/
+env/
+.venv/
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore dataset files (if any)
+*.csv
+*.xlsx
+
+# Ignore machine learning models
+*.h5
+*.keras
+
+# Ignore Streamlit deployment logs
+.streamlit/
+
+# Ignore system files
+.DS_Store
+Thumbs.db

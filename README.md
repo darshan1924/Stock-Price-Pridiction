@@ -113,3 +113,28 @@ This project is licensed under the **MIT License**.
 🔗 [GitHub](https://github.com/yourusername)  
 🔗 [LinkedIn](https://linkedin.com/in/yourusername)  
 
+import logging
+
+# Create a logger
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+
+# Create a file handler and a stream handler
+file_handler = logging.FileHandler('stock_price_predictor.log')
+stream_handler = logging.StreamHandler()
+
+# Create a formatter and set it for the handlers
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+file_handler.setFormatter(formatter)
+stream_handler.setFormatter(formatter)
+
+# Add the handlers to the logger
+logger.addHandler(file_handler)
+logger.addHandler(stream_handler)
+
+# Example usage:
+logger.info('Stock Price Predictor App started')
+logger.debug('Debug message')
+logger.warning('Warning message')
+logger.error('Error message')
+logger.critical('Critical message')

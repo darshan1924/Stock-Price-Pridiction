@@ -1,140 +1,56 @@
-# 📈 Stock Price Predictor App
+📈 Stock Price Predictor App
 
-## 🚀 Overview
-The **Stock Price Predictor App** is a machine learning-powered web application built with **Streamlit**. It allows users to:
-- Fetch real-time stock data using **Yahoo Finance** (`yfinance`).
-- Visualize **Moving Averages** (100, 200, and 250 days).
-- Predict stock prices for the next **10 or 20 days** using a trained deep learning model (`.keras`).
-- Display **original vs predicted prices** for better trend analysis.
+🚀 Overview
+The Stock Price Predictor App is a machine learning-powered application designed to analyze historical stock data, visualize trends, and predict future stock prices. Built with Streamlit, it leverages Yahoo Finance for real-time data retrieval and a Keras-based LSTM model for accurate short-term predictions. This app bridges the gap between financial analysis and machine learning, offering users a seamless experience for stock market insights.
 
----
+📌 Key Features
+Real-Time Stock Data: Fetch live stock data using the Yahoo Finance API (yfinance).
+Technical Indicators: Visualize Moving Averages (100, 200, and 250 days) for trend analysis.
+Stock Price Prediction: Predict stock prices for the next 10 or 20 days using a trained LSTM model.
+Comparison of Trends: Display original vs predicted prices for better decision-making.
+Interactive Visualizations: Use Matplotlib and Streamlit for dynamic and user-friendly charts.
 
-## 📌 Features
-✔️ Real-time stock data fetching 📊  
-✔️ Interactive visualizations (Matplotlib & Streamlit) 📈  
-✔️ Machine Learning predictions using **Keras LSTM model** 🤖  
-✔️ Supports all **publicly traded stocks** via Yahoo Finance 🏰  
+🛠️ Tech Stack
+Frontend: Streamlit (for building the user interface)
+Backend: Python
+Machine Learning: Keras, TensorFlow (LSTM model for time-series forecasting)
+Data Retrieval: Yahoo Finance API (yfinance)
+Visualization: Matplotlib, Pandas
 
----
-
-## 🎥 Live Demo
-[![Streamlit App](https://img.shields.io/badge/Live-Demo-green?style=for-the-badge&logo=streamlit)](https://your-app-name.streamlit.app)
-
----
-
-## 🛠️ Tech Stack
-- **Frontend**: Streamlit
-- **Backend**: Python
-- **Machine Learning**: Keras, TensorFlow
-- **Data Retrieval**: Yahoo Finance API (`yfinance`)
-- **Visualization**: Matplotlib, Pandas
-
----
-
-## 📂 Project Structure
-```
+📂 Project Structure
 Stock_Price_Predictor/
-│── stock_predictor.py            # Streamlit App
-│── Stock market Youtube.ipynb    # Jupyter Notebook for ML Analysis
-│── Latest_stock_price_model.keras # Pretrained ML model
-│── requirements.txt               # Dependencies
+│── stock_predictor.py             # Main Streamlit application
+│── Stock market Youtube.ipynb     # Jupyter Notebook for ML analysis
+│── Latest_stock_price_model.keras # Pretrained LSTM model
+│── requirements.txt               # Python dependencies
 │── README.md                      # Documentation
-│── .gitignore                      # Ignore unnecessary files
-```
+│── .gitignore                     # Ignore unnecessary files
+🎯 How to Run Locally
 
----
 
-## 🎯 How to Run Locally
-
-### 1️⃣ Clone the Repository
-```bash
+1️⃣ Clone the Repository
 git clone https://github.com/yourusername/Stock-Price-Predictor.git
 cd Stock-Price-Predictor
-```
 
-### 2️⃣ Create & Activate Virtual Environment (Recommended)
-```bash
+2️⃣ Create & Activate Virtual Environment (Recommended)
 python -m venv venv
 source venv/bin/activate  # On macOS/Linux
 venv\Scripts\activate  # On Windows
-```
 
-### 3️⃣ Install Dependencies
-```bash
+3️⃣ Install Dependencies
 pip install -r requirements.txt
-```
 
-### 4️⃣ Run Streamlit App
-```bash
+4️⃣ Run the Application
 streamlit run stock_predictor.py
-```
-🚀 Your app will be available at `http://localhost:8501/`  
+The app will be available at http://localhost:8501/.
 
----
+📝 Running the Jupyter Notebook
+The Jupyter Notebook (Stock market Youtube.ipynb) provides an in-depth analysis of stock market trends and predictions. To run it:
 
-## 🌎 Deploying on Streamlit Cloud
-1️⃣ Push this project to **GitHub**  
-2️⃣ Go to [Streamlit Cloud](https://share.streamlit.io/)  
-3️⃣ Select your repository & deploy 🎉  
+Open the notebook locally:
+jupyter notebook
+Alternatively, upload it to Google Colab for cloud-based execution.
 
----
 
-## 📝 Running Jupyter Notebook (`Stock market Youtube.ipynb`)
-To analyze stock market trends and predictions:
-1. Open the **Jupyter Notebook** locally:
-   ```bash
-   jupyter notebook
-   ```
-2. OR Open it directly in **Google Colab**:  
-   [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yourusername/Stock-Price-Predictor/blob/main/Stock%20market%20Youtube.ipynb)
 
----
-
-## ⚡ Future Improvements
-- ✅ Add sentiment analysis for stock market news 📰  
-- ✅ Implement **Deep Learning Transformers** (LSTM, GRU) 🔥  
-- ✅ Deploy as a **fully functional web app**  
-
----
-
-## 📌 Contributing
-Contributions are welcome!  
-Feel free to **fork** this repo and submit a **pull request**.  
-
----
-
-## 🛡️ License
-This project is licensed under the **MIT License**.  
-
----
-
-## 💡 Author
-**👨‍💻 Darshan Chavda**  
-🔗 [GitHub](https://github.com/yourusername)  
-🔗 [LinkedIn](https://linkedin.com/in/yourusername)  
-
-import logging
-
-# Create a logger
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
-
-# Create a file handler and a stream handler
-file_handler = logging.FileHandler('stock_price_predictor.log')
-stream_handler = logging.StreamHandler()
-
-# Create a formatter and set it for the handlers
-formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-file_handler.setFormatter(formatter)
-stream_handler.setFormatter(formatter)
-
-# Add the handlers to the logger
-logger.addHandler(file_handler)
-logger.addHandler(stream_handler)
-
-# Example usage:
-logger.info('Stock Price Predictor App started')
-logger.debug('Debug message')
-logger.warning('Warning message')
-logger.error('Error message')
-logger.critical('Critical message')
+👨‍💻 Darshan Chavda

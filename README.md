@@ -19,11 +19,17 @@ Visualization: Matplotlib, Pandas
 
 ### 📂 Project Structure
 Stock_Price_Predictor/
+
 │── stock_predictor.py            # Main Streamlit application
+
 │── Stock market Youtube.ipynb    # Jupyter Notebook for ML analysis
+
 │── Latest_stock_price_model.keras # Pretrained LSTM model
+
 │── requirements.txt               # Python dependencies
+
 │── README.md                      # Documentation
+
 │── .gitignore                     # Ignore unnecessary files
 
 

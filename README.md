@@ -19,8 +19,8 @@ Visualization: Matplotlib, Pandas
 
 ### 📂 Project Structure
 Stock_Price_Predictor/
-│── stock_predictor.py             # Main Streamlit application
-│── Stock market Youtube.ipynb     # Jupyter Notebook for ML analysis
+│── stock_predictor.py            # Main Streamlit application
+│── Stock market Youtube.ipynb    # Jupyter Notebook for ML analysis
 │── Latest_stock_price_model.keras # Pretrained LSTM model
 │── requirements.txt               # Python dependencies
 │── README.md                      # Documentation
@@ -30,12 +30,15 @@ Stock_Price_Predictor/
 ### 🎯 How to Run Locally
 
 ### 1️⃣ Clone the Repository
-git clone https://github.com/yourusername/Stock-Price-Predictor.git
+git clone <Repository Link>
+
 cd Stock-Price-Predictor
 
 ### 2️⃣ Create & Activate Virtual Environment (Recommended)
 python -m venv venv
+
 source venv/bin/activate  # On macOS/Linux
+
 venv\Scripts\activate  # On Windows
 
 ### 3️⃣ Install Dependencies
@@ -43,6 +46,7 @@ pip install -r requirements.txt
 
 ### 4️⃣ Run the Application
 streamlit run stock_predictor.py
+
 The app will be available at http://localhost:8501/.
 
 ### 📝 Running the Jupyter Notebook
